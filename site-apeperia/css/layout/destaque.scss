@@ -30,7 +30,7 @@
     padding: 0.6em;
     font-size: 1.2em;
     @include borda-arrendondada(50px);
-    @include sombra-padrao;
+    @extend %sombra-padrao;
     font-weight: bold;
   
     font-weight: bold;

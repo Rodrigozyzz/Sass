@@ -75,7 +75,7 @@ footer {
     display: block;
     width: 55px;
     height: 55px;
-    @include image-replecement;
+    @extend %image-replecement;
     margin-left: 1em;
   }
   
