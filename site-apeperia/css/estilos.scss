@@ -19,6 +19,13 @@ $cor-branca : red;
 }
 
 
+@mixin image-replecement{
+  text-indent: -9999px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+
 /** Geral **/
 body {
   font-family: "Roboto Slab", serif;
@@ -59,31 +66,35 @@ header .container {
   position: relative;
 }
 
-.menu-opcoes {
+.menu-principal {
   position: absolute;
   right: 0;
   top: -.5em;
   font-size: 1.2em;
   font-weight: lighter;
+
+  ul {
+    padding-left: 0;
+    }
+    li {
+      display: inline-block;
+      width: 5em;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    
 }
 
-.menu-opcoes ul {
-  padding-left: 0;
-}
 
-.menu-opcoes li {
-  display: inline-block;
-  width: 5em;
-}
 
-.menu-opcoes a {
-  color: white;
-  text-decoration: none;
-}
 
-.menu-opcoes a:hover {
-  text-decoration: underline;
-}
+
 
 /** Destaque **/
 .destaque {
@@ -156,9 +167,7 @@ header .container {
   display: inline-block;
   width: 50px;
   height: 60px;
-  text-indent: -9999px;
-  overflow: hidden;
-  background-repeat: no-repeat;
+  @include image-replecement; 
   background-position: center;
   margin: 1em 1.5em 0 0;
 }
@@ -420,9 +429,7 @@ footer a {
   display: block;
   width: 55px;
   height: 55px;
-  text-indent: -9999px;
-  overflow: hidden;
-  background-repeat: no-repeat;
+  @include image-replecement;
   margin-left: 1em;
 }
 
