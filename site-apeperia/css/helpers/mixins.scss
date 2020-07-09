@@ -17,3 +17,18 @@
   }
     
 
+  @function multiplica-pela-fonte($multiplicador){
+    @return round($multiplicador* $tamanho-da-fonte-padrao);
+  }
+  
+  
+  
+
+
+/////
+
+@import "compass/css3";
+
+@import "compass/utilities";
+
+

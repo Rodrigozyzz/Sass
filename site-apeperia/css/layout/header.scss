@@ -17,10 +17,10 @@ header {
         max-width: 100%;
         margin: 0.5em auto;
         display: block;
-      }// fim do img
-    }// fim do h1
-  }//fim do media query
-}//fim do header
+      } // fim do img
+    } // fim do h1
+  } //fim do media query
+} //fim do header
 
 header .container {
   position: relative;
@@ -36,6 +36,15 @@ header .container {
   top: -0.5em;
   font-size: 1.2em;
   font-weight: lighter;
+  @media #{$mq-mobile} {
+    position: static;
+    display: block;
+    text-align: center;
+    width: auto;
+	}
+
+ 
+
 
   ul {
     padding-left: 0;
@@ -43,6 +52,10 @@ header .container {
   li {
     display: inline-block;
     width: 5em;
+    @media #{$mq-mobile} {
+      margin: 0.4em;
+      width: auto;
+    }
   }
   a {
     color: white;
